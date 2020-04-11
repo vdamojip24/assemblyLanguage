@@ -1,0 +1,19 @@
+Vishal Damojipurapu
+vdamojip@ucsc.edu
+LAB 6: VIGENERE CIPHER
+3/9/18
+1D, Carlos Ramirez
+
+					README
+
+Magic Numbers:
+0123
+0b1100
+	
+
+	Out of all the labs, this was definitely the hardest. There was so much I learned, but there is still so much I need to learn. The biggest concept I learned was the use of jal and jr. This allowed me jump to labels and come back to where I left off without the use of branching. While I did use branching, using jal and jr was more useful because I could test my subroutines and continue my code from wherever I left off. I also learned how to create an array in MIPS because I created a string using an array of characters. Another important concept I learned was the use of a subroutine. It was important for me to design my subroutines in a way that others can call and run them. 
+	With all this being said, there is still a lot for me to learn. I was surprised by the fact that when I tested and ran my subroutines using sys calls that it worked, but when I tested my subroutines using the testing code provided by the professor my program failed. I believe the problem has something to do with the use of syscalls because when I left them in my program, the tests passed, but when I took them out, the wrong output was produced, or no output showed up at all. After debugging for a while, I was able to narrow my problem down to single missing line, which was a simple missing jr statement. On top of that I was not able to limit my input to 30 characters because it messes with my input. This was because my counter wasn’t adding up every time and I was naive to think it would be very simple. I found out that this was because I wasn't incrementing my counter every time i used store byte. Lastly, working with the stack was very difficult because I did not know where to update the stack pointer and how. Luckily, the TA was very helpful in assisting me. The tutor also helped me test out my EncryptString and DecryptString by teaching me how to store bytes into an array. This way I was able to see string was printed correctly or not. 
+	In addition to the test code provided by the professor, I ran my own tests to see what edge cases would pass. I tested edge cases where the input is longer than the key, lower case letters, and cases where the key is longer than the input. This was working fine, so I tested other cases. These other cases included input with non-alphabetical characters. I also tested one of the inputs provided in piazza which had every single possible case, and that worked as well.
+	When, I attempt encryption with a keystring that has illegal characters, the encryption fails and the wrong character prints out. This is because I don't check for the edge case where the key is not a capital alphabet. The algorithm fails because I did not fix it accordingly. Luckily, we did not have to worry about this issue. 
+	To write a recursive subroutine, I would continuously call it in the subroutine itself. The subroutine would break out with a terminating condition, but until then, it is continuously calling itself. I would use jal to call the method and use "b label" to go back to the top of the subroutine. Then, I would check for the terminating condition at the top of the subroutine. If the condition is satisfied, I would branch to another label where it would jr $ra back to where I called jal.
+	To pass more than 4 arguments into a subroutine, I would use the stack. Stack memory stays within the subroutine, so once I am done using the subroutine for the first 4 arguments, then those argument registers can be used for other program arguments. The stack can be updated within the subroutine and once its done, the argument registers are free to use again for the rest of the program.

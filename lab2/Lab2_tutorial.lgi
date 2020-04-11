@@ -1,0 +1,34 @@
+41 2 0
+38 1
+22 9 27 288 7 0 \NUL
+Vishal Damojipurapu, vdamojip@ucsc.edu
+22 9 49 504 29 0 \NUL
+Lab 2: INTRODUCTION TO LOGIC WITH MULTIMEDIA LOGIC Part A (Tutorial)
+22 10 71 62 51 0 \NUL
+1/26/18
+22 10 92 141 72 0 \NUL
+1D, Carlos Ramirez
+8 244 196 293 147 1 0
+7 364 176 413 127 2 1
+22 204 184 240 164 0 \NUL
+Input
+22 412 160 458 140 0 \NUL
+Output
+22 48 287 679 267 0 \NUL
+Figured out how to toggle the switch to see how the input affects the output (how to light the light).
+1 290 171 365 151
+39 16777215
+47 0
+40 1 6 6
+50 800 600
+51 0 100
+30
+System
+16
+700
+0
+0
+0
+0
+0
+34

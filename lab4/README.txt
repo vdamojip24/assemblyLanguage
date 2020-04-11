@@ -1,0 +1,17 @@
+Vishal Damojipurapu
+vdamojip@ucsc.edu
+LAB 4: DEADBEEF in MIPS
+2/16/18
+1D, Carlos Ramirez
+				 Lab4 README
+
+Magic Numbers:
+1. 9671 (decimal)
+2. 0x1224 (hexadecimal)
+3. 3333 (decimal)
+
+	This program was very interesting because I had never seen anything like it. I was surprised at the way we were able to combine hardware and software. I was fascinated by all the data addresses that were shown, and seeing how each  register stored some value at some point during run time. I also liked how we   were able to constantly change the temporary registers. There was so much I     learned because everything was new to me. MIPS was a language I had never used  before. I also had to learn how to work with the addresses to see where         everything is being stored. Lastly, I had to learn all the new operators and    calls required for the program. The part I had trouble with the most was the    loop and branching. I had trouble figuring out how to incorporate the           conditional for the if branch into the loop. However, once I figured that out,  all I had to do was fix the extra line at the end of the output, which was an   easy fix. The Kann textbook was really helpful as I received several pieces of  code from it. Specifically, I was able to find out how to use user input from   the textbook and how to create a loop. In addition, I received help from the TA in lab on how to construct my "if" branches. 
+	When testing the program, I noticed that the program slows down as a    larger number N is inputted. When I inputted N as 1,000,000, the program slowed down and crashed. I know that this is because there is only a certain fixed     amount of space. From this, I learned that the largest N is limited by the 32   bit registers. Due to this, the largest number we can use for N is 2,147,483,647. This is also the same as 2^31 - 1. 
+	After assembling the program and going step by step, I stopped at the   $a0 register because the "Please enter a number N:" string was loaded into it.  When checking the addresses of the string and clicking on the ASCII box, I saw  the address began at 0x10010000. Checking the value in each box, I learned that the string ends at the address 0x10010019. Thus, the range is from 0x10010000 to0x10010019. 
+	The pseudo-ops that are part of MIPS assembly language refer to the     pseudo operators that are translated into instructions by the assembler. Pseudo-ops include li, la, rem. This is because these operators can be simplified into the basic instructions. For example, rem can be simplified into addi, div, and  mfhi. Likewise, li can be simplified into addiu. Moreover, the assembled        instructions produce the appropriate results by changing li $v0, 5 into addiu $2, $0, 0x00000005. Then, the syscall operator tells the system to read the       integer from the correct address. Specifically, syscall is a system operator,   not a pseudo operator. 
+	In this entire program, I used a total of 10 registers. I for sure had  to use the two registers $gp and $sp since those do not change. $gp is a pointer for global memory and $sp is a stack pointer. In addition, I had to use $at,   which is a register reserved for the assembler. On top of that, I had to use 7  additional registers for the rest of my program. Maybe if I was able to be more efficient I could have used fewer of those 7 additional registers, but the $gp, $sp, and $at registers all had to be used.   
